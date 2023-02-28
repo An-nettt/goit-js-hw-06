@@ -15,14 +15,10 @@ function getRandomHexColor() {
 }
 
 function createBoxes(amount) {
-  // console.log(amount);
   let width = 20;
   let height = 20;
   if (amount > 0) {
     for (let i = 1; i <= amount; i += 1) {
-      // let elementDiv = document.createElement("div");
-
-      // console.log(elementDiv);
       refs.boxes.insertAdjacentHTML("afterbegin", `<div data-box></div>`);
       const box = document.querySelector("[data-box]");
       box.style.cssText = `width: ${(width += 10)}px ; height: ${(height += 10)}px; background-color: ${getRandomHexColor()}`;

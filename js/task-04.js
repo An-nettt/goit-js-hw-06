@@ -10,7 +10,6 @@ const value = document.querySelector("#value");
 function addClick({ step = 1 }) {
   counterValue += step;
   updateValue();
-  //   console.log(counterValue);
 }
 
 incrementBtn.addEventListener("click", addClick);
@@ -18,7 +17,6 @@ incrementBtn.addEventListener("click", addClick);
 function removeClick({ step = 1 }) {
   counterValue -= step;
   updateValue();
-  //   console.log(counterValue);
 }
 
 decrementBtn.addEventListener("click", removeClick);

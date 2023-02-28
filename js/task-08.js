@@ -7,14 +7,14 @@ refs.formEl.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
   event.preventDefault();
 
-  const formData = new FormData(event.currentTarget);
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+  console.log(`Пошта: ${email.value}, пароль: ${password.value}`);
 
-  formData.forEach((value, name) => {
-    if (value === "") {
-      return console.log("Всі поля повинні бути заповнені!");
-    }
-    console.log(name);
-    console.log(value);
-    event.currentTarget.reset();
-  });
+  if (email.value === "" || password.value === "") {
+    window.alert("Всі поля повинні бути заповнені!");
+  }
+
+  event.currentTarget.reset();
 }

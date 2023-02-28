@@ -20,4 +20,3 @@ const items = images.map((image) => item(image)).join("");
 
 const listEl = document.querySelector(".gallery");
 listEl.insertAdjacentHTML("beforeend", items);
-console.log(listEl);
